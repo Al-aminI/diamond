@@ -7,13 +7,16 @@ void main() {
   MobileAds.instance
     ..initialize()
     ..updateRequestConfiguration(
-      RequestConfiguration(
-          testDeviceIds: ['7B3EEABB8EE11C2BE770B684D95219ECB']),
+      RequestConfiguration(testDeviceIds: ["7A091B1D32EBC165A7498F42BBA86391"]),
     );
   runApp(
     MaterialApp(
-      home: const Center(
-        child: AdmobComponent(),
+      home: const Scaffold(
+        body: SafeArea(
+          child: Center(
+            child: AdmobComponent(),
+          ),
+        ),
       ),
       theme: ThemeData.light(),
     ),
